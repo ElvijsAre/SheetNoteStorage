@@ -1,0 +1,510 @@
+[2016-01-27 04:02:12] local.ERROR: exception 'Symfony\Component\Console\Exception\RuntimeException' with message 'Not enough arguments (missing: "name").' in /var/www/html/mazasmajas2/vendor/symfony/console/Input/Input.php:87
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(251): Symfony\Component\Console\Input\Input->validate()
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}  
+[2016-01-27 04:02:27] local.ERROR: exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'homestead'@'localhost' (using password: YES)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:55
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(55): PDO->__construct('mysql:host=loca...', 'homestead', 'secret', Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(22): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(846): call_user_func(Object(Closure))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(714): Illuminate\Database\Connection->getPdo()
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(603): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(324): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(405): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-01-28 04:18:23] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Collective\Html\HtmlServiceProvider' not found' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 {main}  
+[2016-01-28 04:41:26] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:requeste" is not defined.
+
+Did you mean one of these?
+    make:request
+    make:provider
+    make:policy
+    make:seeder
+    make:migration
+    make:test
+    make:model
+    make:middleware
+    make:controller
+    make:console
+    make:event
+    make:job
+    make:listener
+    make:auth' in /var/www/html/mazasmajas2/vendor/symfony/console/Application.php:508
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('make:requeste')
+#1 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-01-28 06:29:42] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1025 Error on rename of './mazasmajas2/#sql-396_ee' to './mazasmajas2/posts' (errno: 150)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:390
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(390): PDOStatement->execute(Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(644): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'alter table `po...', Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#9 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_28_0400...', 3, false)
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[HY000]: General error: 1025 Error on rename of './mazasmajas2/#sql-396_ee' to './mazasmajas2/posts' (errno: 150) (SQL: alter table `posts` drop `user_id`)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:651
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#6 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#7 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_28_0400...', 3, false)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#15 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2016-01-29 08:29:36] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'user_id'; check that column/key exists' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:390
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(390): PDOStatement->execute(Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(644): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'alter table `po...', Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#9 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_28_0400...', 3, false)
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'user_id'; check that column/key exists (SQL: alter table `posts` drop `user_id`)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:651
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#6 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#7 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_28_0400...', 3, false)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#15 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2016-01-29 08:33:46] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1025 Error on rename of './mazasmajas2/posts' to './mazasmajas2/#sql2-371-2f' (errno: 152)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:390
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(390): PDOStatement->execute(Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(644): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'alter table `po...', Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#9 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_28_0400...', 3, false)
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[HY000]: General error: 1025 Error on rename of './mazasmajas2/posts' to './mazasmajas2/#sql2-371-2f' (errno: 152) (SQL: alter table `posts` drop foreign key `posts_user_id_foreign`)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:651
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#6 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#7 /var/www/html/mazasmajas2/database/migrations/2016_01_28_040018_update_posts_table.php(17): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_28_0400...', 3, false)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#15 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2016-01-29 08:35:40] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'CreatePostsTable' not found' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php:336
+Stack trace:
+#0 {main}  
+[2016-01-29 09:23:38] local.ERROR: exception 'Symfony\Component\Console\Exception\RuntimeException' with message 'Too many arguments.' in /var/www/html/mazasmajas2/vendor/symfony/console/Input/ArgvInput.php:179
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/symfony/console/Input/ArgvInput.php(88): Symfony\Component\Console\Input\ArgvInput->parseArgument('table')
+#1 /var/www/html/mazasmajas2/vendor/symfony/console/Input/Input.php(64): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(221): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 {main}  
+[2016-01-29 09:46:59] local.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mazasmajas2`.`#sql-371_e1`, CONSTRAINT `posts_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`))' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:390
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(390): PDOStatement->execute(Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(644): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'alter table `po...', Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#9 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_29_0945...', 3, false)
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mazasmajas2`.`#sql-371_e1`, CONSTRAINT `posts_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)) (SQL: alter table `posts` add constraint posts_category_id_foreign foreign key (`category_id`) references `categories` (`id`))' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:651
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#6 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#7 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_29_0945...', 3, false)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#15 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2016-01-29 09:48:02] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'category_id'' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:390
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(390): PDOStatement->execute(Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(644): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'alter table `po...', Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#9 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_29_0945...', 3, false)
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'category_id' (SQL: alter table `posts` add `category_id` int unsigned not null)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:651
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('alter table `po...', Array, Object(Closure))
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('alter table `po...', Array, Object(Closure))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('alter table `po...')
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(128): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->table('posts', Object(Closure))
+#6 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#7 /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php(19): Illuminate\Support\Facades\Schema::table('posts', Object(Closure))
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(147): UpdatePostsTable->up()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(117): Illuminate\Database\Migrations\Migrator->runUp('2016_01_29_0945...', 3, false)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(86): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(77): Illuminate\Database\Migrations\Migrator->run('/var/www/html/m...', Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#15 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2016-01-29 10:19:22] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_101800_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:20:10] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_101800_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:22:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_101800_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:23:41] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_101800_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:23:47] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_101800_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:23:58] local.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:390
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(390): PDOStatement->execute(Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(644): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'drop table `cat...', Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('drop table `cat...', Array, Object(Closure))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('drop table `cat...', Array, Object(Closure))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('drop table `cat...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(161): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(218): Illuminate\Database\Schema\Builder->drop('categories')
+#8 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#9 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Schema::drop('categories')
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(233): CreateCategoriesTable->down()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(206): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(69): Illuminate\Database\Migrations\Migrator->reset(false)
+#13 [internal function]: Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\ResetCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table `categories`)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:651
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('drop table `cat...', Array, Object(Closure))
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('drop table `cat...', Array, Object(Closure))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('drop table `cat...')
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(161): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(218): Illuminate\Database\Schema\Builder->drop('categories')
+#6 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#7 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Schema::drop('categories')
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(233): CreateCategoriesTable->down()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(206): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(69): Illuminate\Database\Migrations\Migrator->reset(false)
+#11 [internal function]: Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#14 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\ResetCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main}  
+[2016-01-29 10:24:28] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:26:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:26:18] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class UpdatePostsTable' in /var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php:31
+Stack trace:
+#0 {main}  
+[2016-01-29 10:28:00] local.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:390
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(390): PDOStatement->execute(Array)
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(644): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'drop table `cat...', Array)
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('drop table `cat...', Array, Object(Closure))
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('drop table `cat...', Array, Object(Closure))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('drop table `cat...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(161): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(218): Illuminate\Database\Schema\Builder->drop('categories')
+#8 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#9 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Schema::drop('categories')
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(233): CreateCategoriesTable->down()
+#11 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(206): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(69): Illuminate\Database\Migrations\Migrator->reset(false)
+#13 [internal function]: Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#14 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#16 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\ResetCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table `categories`)' in /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php:651
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(611): Illuminate\Database\Connection->runQueryCallback('drop table `cat...', Array, Object(Closure))
+#1 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Connection.php(391): Illuminate\Database\Connection->run('drop table `cat...', Array, Object(Closure))
+#2 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('drop table `cat...')
+#3 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(203): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(161): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(218): Illuminate\Database\Schema\Builder->drop('categories')
+#6 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#7 /var/www/html/mazasmajas2/database/migrations/2016_01_29_092430_create_categories_table.php(29): Illuminate\Support\Facades\Schema::drop('categories')
+#8 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(233): CreateCategoriesTable->down()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(206): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(69): Illuminate\Database\Migrations\Migrator->reset(false)
+#11 [internal function]: Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#13 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#14 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\ResetCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main}  
+[2016-01-29 10:28:31] local.ERROR: exception 'ErrorException' with message 'include(/var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php): failed to open stream: No such file or directory' in /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php:412
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php(412): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(/var/ww...', '/var/www/html/m...', 412, Array)
+#1 /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php(412): Composer\Autoload\includeFile()
+#2 /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/var/www/html/m...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('UpdatePostsTabl...')
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(336): spl_autoload_call('UpdatePostsTabl...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(227): Illuminate\Database\Migrations\Migrator->resolve('2016_01_28_0400...')
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(206): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(69): Illuminate\Database\Migrations\Migrator->reset(false)
+#8 [internal function]: Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#11 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\ResetCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 {main}  
+[2016-01-29 10:29:49] local.ERROR: exception 'ErrorException' with message 'include(/var/www/html/mazasmajas2/database/migrations/2016_01_29_094516_update_posts_table.php): failed to open stream: No such file or directory' in /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php:412
+Stack trace:
+#0 /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php(412): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(/var/ww...', '/var/www/html/m...', 412, Array)
+#1 /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php(412): Composer\Autoload\includeFile()
+#2 /var/www/html/mazasmajas2/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/var/www/html/m...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('UpdatePostsTabl...')
+#4 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(336): spl_autoload_call('UpdatePostsTabl...')
+#5 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(227): Illuminate\Database\Migrations\Migrator->resolve('2016_01_28_0400...')
+#6 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(206): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#7 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/ResetCommand.php(69): Illuminate\Database\Migrations\Migrator->reset(false)
+#8 [internal function]: Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#9 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#10 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#11 /var/www/html/mazasmajas2/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\ResetCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/mazasmajas2/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/mazasmajas2/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/mazasmajas2/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 {main}  
